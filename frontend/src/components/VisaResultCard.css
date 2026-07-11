@@ -1,0 +1,73 @@
+.visa-card {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding: 2rem;
+  background-color: var(--color-surface);
+  border-top: 5px double var(--color-navy);
+  border-bottom: 5px double var(--color-navy);
+  box-shadow: 0 6px 24px rgba(11, 37, 69, 0.08);
+}
+
+.visa-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.visa-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.visa-field__label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.visa-field__value {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.visa-card__download {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding: 0.85rem 1.75rem;
+  background-color: var(--color-navy);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2px;
+  transition: background-color 150ms ease;
+}
+
+.visa-card__download:hover {
+  background-color: var(--color-blue);
+}
+
+@media (max-width: 640px) {
+  .visa-card {
+    padding: 1.5rem 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .visa-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-card__download {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+.visa-form h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.visa-form__section {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  padding: 1.25rem 0;
+  margin: 0;
+}
+
+.visa-form__section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.visa-form__section legend {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.visa-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.visa-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.visa-form__field input,
+.visa-form__field select {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--color-text);
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--color-border);
+  background-color: #fff;
+}
+
+.visa-form__message {
+  font-size: 0.88rem;
+  margin: 1rem 0 0;
+}
+
+.visa-form__message--error {
+  color: var(--color-expired);
+}
+
+.visa-form__actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.visa-form__cancel {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.visa-form__cancel:hover:not(:disabled) {
+  border-color: var(--color-navy);
+}
+
+.visa-form__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--color-navy);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.visa-form__submit:hover:not(:disabled) {
+  background-color: var(--color-blue);
+}
+
+.visa-form__cancel:disabled,
+.visa-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,118 @@
+.admin-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: var(--color-navy);
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem;
+}
+
+.admin-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.admin-sidebar__brand-label {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.admin-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.admin-sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+}
+
+.admin-sidebar__nav-item--active {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-left: 3px solid var(--color-verified);
+}
+
+.admin-sidebar__nav-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 16px;
+}
+
+.admin-sidebar__nav-icon span {
+  display: block;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.admin-sidebar__nav-icon span:nth-child(2) {
+  width: 70%;
+}
+
+.admin-sidebar__nav-icon span:nth-child(3) {
+  width: 45%;
+}
+
+.admin-sidebar__logout {
+  margin-top: 1.5rem;
+  padding: 0.6rem 0.75rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.admin-sidebar__logout:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .admin-sidebar__brand {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .admin-sidebar__nav {
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .admin-sidebar__nav-item--active {
+    border-left: none;
+    border-bottom: 3px solid var(--color-verified);
+  }
+
+  .admin-sidebar__logout {
+    margin-top: 0;
+  }
+}

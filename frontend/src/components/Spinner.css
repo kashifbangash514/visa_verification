@@ -1,0 +1,44 @@
+.spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  animation: spinner-rotate 700ms linear infinite;
+  color: var(--color-navy);
+}
+
+.spinner--light {
+  color: #fff;
+}
+
+.spinner--small {
+  width: 14px;
+  height: 14px;
+}
+
+.spinner--medium {
+  width: 22px;
+  height: 22px;
+  border-width: 3px;
+}
+
+.spinner--large {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    /* Loading spinners convey active work, not decorative motion - keep them
+       legible instead of inheriting the app-wide near-instant override. */
+    animation-duration: 900ms !important;
+  }
+}

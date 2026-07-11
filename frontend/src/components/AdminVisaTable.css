@@ -1,0 +1,70 @@
+.visa-table-wrapper {
+  overflow-x: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.visa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.visa-table th,
+.visa-table td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.visa-table th {
+  background-color: var(--color-navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.visa-table__mono {
+  font-family: var(--font-mono);
+}
+
+.visa-table__empty {
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.visa-table__status {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.visa-table__status--valid {
+  color: var(--color-verified);
+}
+
+.visa-table__status--expired,
+.visa-table__status--revoked {
+  color: var(--color-expired);
+}
+
+.visa-table__delete {
+  padding: 0.35rem 0.7rem;
+  background: none;
+  border: 1px solid var(--color-expired);
+  color: var(--color-expired);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.visa-table__delete:hover {
+  background-color: var(--color-expired);
+  color: #fff;
+}
