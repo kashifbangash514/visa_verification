@@ -68,6 +68,7 @@ export default function PublicLookupPage() {
       const { data } = await apiClient.post<VisaPublicResponse>('/visas/lookup', {
         passportNumber: trimmedPassport,
         evisaNumber: trimmedEvisa,
+        country: import.meta.env.VITE_COUNTRY ?? 'IT',
       });
       setResult(data);
       setResultKey((key) => key + 1);
